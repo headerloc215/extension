@@ -1,0 +1,39 @@
+{
+  "name": "Form Automation Extension",
+  "version": "2.0",
+  "description": "This extension will help you automate forms.",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "scripts/background/main.js"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/16x16.png",
+      "32": "icons/32x32.png",
+      "48": "icons/48x48.png",
+      "128": "icons/128x128.png"
+    },
+    "default_popup": "popup/pages/login.html",
+    "default_title": "Click to open"
+  },
+  "icons": {
+    "16": "icons/16x16.png",
+    "32": "icons/32x32.png",
+    "48": "icons/48x48.png",
+    "128": "icons/128x128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["extension-other/contentScript.js"]
+    },
+    {
+      "matches": ["https://kinnser.net/AM/OASIS/OASISE/*"],
+      "js": [
+        "scripts/content/kinnser_soc.js",
+        "scripts/content/kinnser_recert.js"
+      ]
+    }
+  ],
+  "permissions": ["storage", "scripting", "activeTab", "identity"]
+}
