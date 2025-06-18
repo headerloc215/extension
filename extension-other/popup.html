@@ -1,0 +1,3068 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link rel="stylesheet" href="../scripts/imports/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../popup/assets/css/style.css" />
+    <title>Form Automation</title>
+  </head>
+  <body>
+    <div class="mt-4">
+      <div class="row align-items-center">
+        <div class="col-3 text-start fw-bolder">LOGO HERE</div>
+        <div class="col-7 text-center">
+          <select class="website-select form-select hover-pointer">
+            <option
+              selected
+              value="alliancehs"
+              data-container="#alliancehs_website_form"
+            >
+              Alliancehs
+            </option>
+            <option
+              value="tarlani_mobile"
+              data-container="#tarlani_mobile_website_form"
+            >
+              Tarlani Mobile
+            </option>
+            <option value="kinnser" data-container="#kinnser_website_form">
+              Kinnser
+            </option>
+            <option value="hospicemd" data-container="#hospicemd_website_form">
+              hospicemd
+            </option>
+            <option value="devero" data-container="#COM_website_form">
+              COM
+            </option>
+          </select>
+        </div>
+        <div class="col-2 text-end">
+          <div class="dropdown">
+            <a
+              class="btn"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                class="profile-icon-image rounded-circle"
+                width="40px"
+                src="../popup/assets/images/profile_icon.png"
+              />
+            </a>
+
+            <ul class="dropdown-menu profile-icon-options"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4 mb-5">
+      <ul class="nav nav-pills" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="soc-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#soc-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="soc-tab-pane"
+            aria-selected="true"
+          >
+            SOC
+          </button>
+        </li>
+        <li class="nav-item netsmartcloud-roc-state" role="presentation">
+          <button
+            class="nav-link"
+            id="netsmartcloud-roc-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#netsmartcloud-roc-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="netsmartcloud-roc-tab-pane"
+            aria-selected="false"
+          >
+            ROC
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="fu-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#fu-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="fu-tab-pane"
+            aria-selected="false"
+          >
+            f/u
+          </button>
+        </li>
+        <li class="nav-item netsmartcloud-followup-state" role="presentation">
+          <button
+            class="nav-link"
+            id="netsmartcloud-followup-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#netsmartcloud-followup-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="netsmartcloud-followup-tab-pane"
+            aria-selected="false"
+          >
+            Follow Up
+          </button>
+        </li>
+        <li class="nav-item netsmartcloud-recert-state" role="presentation">
+          <button
+            class="nav-link"
+            id="netsmartcloud-recert-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#netsmartcloud-recert-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="netsmartcloud-recert-tab-pane"
+            aria-selected="false"
+          >
+            Recertification
+          </button>
+        </li>
+
+        <li class="nav-item netsmartcloud-discharge-state" role="presentation">
+          <button
+            class="nav-link"
+            id="netsmartcloud-discharge-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#netsmartcloud-discharge-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="netsmartcloud-discharge-tab-pane"
+            aria-selected="false"
+          >
+            Discharge
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content mt-3 container" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="soc-tab-pane"
+          role="tabpanel"
+          aria-labelledby="soc-tab"
+          tabindex="0"
+        >
+          <div id="socSection" class="section-content">
+            <div class="row">
+              <div class="col-3">ADLs:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="adls"
+                    id="adls-1"
+                    value="1"
+                  />
+                  <label class="form-check-label" for="adls-1"> #1 </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="adls"
+                    id="adls-2"
+                    value="2"
+                  />
+                  <label class="form-check-label" for="adls-2"> #2 </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="adls"
+                    id="adls-3"
+                    value="3"
+                  />
+                  <label class="form-check-label" for="adls-3"> #3 </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="adls"
+                    id="adls-4"
+                    value="4"
+                  />
+                  <label class="form-check-label" for="adls-4"> #4 </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-1">
+              <div class="col-3">DME:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="dme"
+                    id="dme1"
+                    value="cane"
+                  />
+                  <label class="form-check-label" for="dme1"> Cane </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="dme"
+                    id="dme2"
+                    value="walker"
+                  />
+                  <label class="form-check-label" for="dme2"> Walker </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="dme"
+                    id="dme3"
+                    value="wheelchair"
+                  />
+                  <label class="form-check-label" for="dme3">
+                    Wheelchair
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-1">
+              <div class="col-3">Mental:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check w-100">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="mental"
+                    id="mental1"
+                    value="aaox4"
+                  />
+                  <label class="form-check-label" for="mental1">
+                    A/A/Ox4
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="mental"
+                    id="mental2"
+                    value="forgetful"
+                  />
+                  <label class="form-check-label" for="mental2">
+                    Forgetful/Confused
+                  </label>
+                </div>
+                <div class="form-check ms-5">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="mental"
+                    id="mental3"
+                    value="able"
+                  />
+                  <label class="form-check-label" for="mental3">
+                    able to follow command
+                  </label>
+                </div>
+                <div class="form-check ms-5">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="mental"
+                    id="mental4"
+                    value="unable"
+                  />
+                  <label class="form-check-label" for="mental4">
+                    unable to follow command
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="mental"
+                    id="mental5"
+                    value="na"
+                  />
+                  <label class="form-check-label" for="mental5"> N/A </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-1">
+              <div class="col-3">Home:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="home"
+                    id="home1"
+                    value="home"
+                  />
+                  <label class="form-check-label" for="home1"> Home </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="home"
+                    id="home2"
+                    value="b&c"
+                  />
+                  <label class="form-check-label" for="home2"> B&C </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="home"
+                    id="home3"
+                    value="assisted"
+                  />
+                  <label class="form-check-label" for="home3"> Assisted </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-1">
+              <div class="col-3">Diagnosis:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="wound"
+                    name="diagnosis"
+                    id="diagnosis1"
+                  />
+                  <label class="form-check-label" for="diagnosis1">
+                    Wound
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="trach"
+                    name="diagnosis"
+                    id="diagnosis2"
+                  />
+                  <label class="form-check-label" for="diagnosis2">
+                    Trach
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="esrd"
+                    name="diagnosis"
+                    id="diagnosis3"
+                  />
+                  <label class="form-check-label" for="diagnosis3">
+                    ESRD
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="picc"
+                    name="diagnosis"
+                    id="diagnosis4"
+                  />
+                  <label class="form-check-label" for="diagnosis4">
+                    PICC Line
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="ogtube"
+                    name="diagnosis"
+                    id="diagnosis5"
+                  />
+                  <label class="form-check-label" for="diagnosis5">
+                    G-Tube
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="chf"
+                    name="diagnosis"
+                    id="diagnosis6"
+                  />
+                  <label class="form-check-label" for="diagnosis6"> CHF </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="dm1"
+                    name="diagnosis"
+                    id="diagnosis7"
+                  />
+                  <label class="form-check-label" for="diagnosis7"> DM1 </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="dm2"
+                    name="diagnosis"
+                    id="diagnosis8"
+                  />
+                  <label class="form-check-label" for="diagnosis8"> DM2 </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="foley"
+                    name="diagnosis"
+                    id="diagnosis9"
+                  />
+                  <label class="form-check-label" for="diagnosis9">
+                    Foley
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-1">
+              <div class="col-3">Precautions:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="fall"
+                    name="precautions"
+                    id="precautions1"
+                  />
+                  <label class="form-check-label" for="precautions1">
+                    Fall
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="braden"
+                    name="precautions"
+                    id="precautions2"
+                  />
+                  <label class="form-check-label" for="precautions2">
+                    Braden
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="oxygen"
+                    name="precautions"
+                    id="precautions3"
+                  />
+                  <label class="form-check-label" for="precautions3">
+                    Oxygen
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="aspiration"
+                    name="precautions"
+                    id="precautions4"
+                  />
+                  <label class="form-check-label" for="precautions4">
+                    Aspiration
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="seizure"
+                    name="precautions"
+                    id="precautions5"
+                  />
+                  <label class="form-check-label" for="precautions5">
+                    Seizure
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto mt-4">
+              <button class="startButton btn btn-primary">Start</button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="fu-tab-pane"
+          role="tabpanel"
+          aria-labelledby="fu-tab"
+          tabindex="0"
+        >
+          <div id="fuSection" class="section-content">
+            <div class="row">
+              <div class="col-3">ADLs:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="f-adls"
+                    id="f-adls-1"
+                    value="1"
+                  />
+                  <label class="form-check-label" for="f-adls-1"> #1 </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="f-adls"
+                    id="f-adls-2"
+                    value="2"
+                  />
+                  <label class="form-check-label" for="f-adls-2"> #2 </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="f-adls"
+                    id="f-adls-3"
+                    value="3"
+                  />
+                  <label class="form-check-label" for="f-adls-3"> #3 </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="f-adls"
+                    id="f-adls-4"
+                    value="4"
+                  />
+                  <label class="form-check-label" for="f-adls-4"> #4 </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-1">
+              <div class="col-3">DME:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="f-dme"
+                    id="f-dme1"
+                    value="cane"
+                  />
+                  <label class="form-check-label" for="f-dme1"> Cane </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="f-dme"
+                    id="f-dme2"
+                    value="walker"
+                  />
+                  <label class="form-check-label" for="f-dme2"> Walker </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="f-dme"
+                    id="f-dme3"
+                    value="wheelchair"
+                  />
+                  <label class="form-check-label" for="f-dme3">
+                    Wheelchair
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-1">
+              <div class="col-3">Mental:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check w-100">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="f-mental"
+                    id="f-mental1"
+                    value="aaox4"
+                  />
+                  <label class="form-check-label" for="f-mental1">
+                    A/A/Ox4
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="f-mental"
+                    id="f-mental2"
+                    value="forgetful"
+                  />
+                  <label class="form-check-label" for="f-mental2">
+                    Forgetful/Confused
+                  </label>
+                </div>
+                <div class="form-check ms-5">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="f-mental"
+                    id="f-mental3"
+                    value="able"
+                  />
+                  <label class="form-check-label" for="f-mental3">
+                    able to follow command
+                  </label>
+                </div>
+                <div class="form-check ms-5">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="f-mental"
+                    id="f-mental4"
+                    value="unable"
+                  />
+                  <label class="form-check-label" for="f-mental4">
+                    unable to follow command
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="f-mental"
+                    id="f-mental5"
+                    value="na"
+                  />
+                  <label class="form-check-label" for="f-mental5"> N/A </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-1">
+              <div class="col-3">Diagnosis:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Pain"
+                    name="f-diagnosis"
+                    id="f-diagnosis1"
+                  />
+                  <label class="form-check-label" for="f-diagnosis1">
+                    Pain
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="CHF"
+                    name="f-diagnosis"
+                    id="f-diagnosis2"
+                  />
+                  <label class="form-check-label" for="f-diagnosis2">
+                    CHF
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Foley"
+                    name="f-diagnosis"
+                    id="f-diagnosis3"
+                  />
+                  <label class="form-check-label" for="f-diagnosis3">
+                    Foley
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto mt-4">
+              <button class="startButton btn btn-primary">Start</button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="netsmartcloud-roc-tab-pane"
+          role="tabpanel"
+          aria-labelledby="netsmartcloud-roc-tab"
+          tabindex="0"
+        >
+          <form id="netsmartcloud-roc-form">
+            <div class="row">
+              <div class="col-3">ADLs:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-roc-adl-radio"
+                    id="netsmartcloud-roc-adl-radio1"
+                    value="#0"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-adl-radio1"
+                  >
+                    #0
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-roc-adl-radio"
+                    id="netsmartcloud-roc-adl-radio2"
+                    value="#1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-adl-radio2"
+                  >
+                    #1
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-roc-adl-radio"
+                    id="netsmartcloud-roc-adl-radio3"
+                    value="#2"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-adl-radio3"
+                  >
+                    #2
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-roc-adl-radio"
+                    id="netsmartcloud-roc-adl-radio4"
+                    value="#3"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-adl-radio4"
+                  >
+                    #3
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-roc-adl-radio"
+                    id="netsmartcloud-roc-adl-radio5"
+                    value="#4"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-adl-radio5"
+                  >
+                    #4
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">DME:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-roc-dme-radio"
+                    id="netsmartcloud-roc-dme-radio1"
+                    value="cane"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-dme-radio1"
+                  >
+                    Cane
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-roc-dme-radio"
+                    id="netsmartcloud-roc-dme-radio2"
+                    value="walker"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-dme-radio2"
+                  >
+                    Walker
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-roc-dme-radio"
+                    id="netsmartcloud-roc-dme-radio3"
+                    value="wheelchair"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-dme-radio3"
+                  >
+                    Wheelchair
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Mental:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check w-100">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-roc-mental-radio"
+                    id="netsmartcloud-roc-mental-radio1"
+                    value="A/A/Ox4"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-mental-radio1"
+                  >
+                    A/A/Ox4
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-roc-mental-radio"
+                    id="netsmartcloud-roc-mental-radio2"
+                    value="forgetful/confused"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-mental-radio2"
+                  >
+                    Forgetful/Confused
+                  </label>
+                </div>
+                <div class="form-check ms-5">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-roc-mental-radio"
+                    id="netsmartcloud-roc-mental-radio3"
+                    value="able to follow command"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-mental-radio3"
+                  >
+                    able to follow command
+                  </label>
+                </div>
+                <div class="form-check ms-5">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-roc-mental-radio"
+                    id="netsmartcloud-roc-mental-radio4"
+                    value="unable to follow command"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-mental-radio4"
+                  >
+                    unable to follow command
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-roc-mental-radio"
+                    id="netsmartcloud-roc-mental-radio5"
+                    value="n/a"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-mental-radio5"
+                  >
+                    N/A
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Pain:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-roc-pain-radio"
+                    id="netsmartcloud-roc-pain-radio1"
+                    value="pain"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-pain-radio1"
+                  >
+                    Pain
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-roc-pain-radio"
+                    id="netsmartcloud-roc-pain-radio2"
+                    value="nopain"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-pain-radio2"
+                  >
+                    No Pain
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Home:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-roc-home-radio"
+                    id="netsmartcloud-roc-home-radio1"
+                    value="home"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-home-radio1"
+                  >
+                    Home
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-roc-home-radio"
+                    id="netsmartcloud-roc-home-radio2"
+                    value="B&C"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-home-radio2"
+                  >
+                    B&C
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-roc-home-radio"
+                    id="netsmartcloud-roc-home-radio3"
+                    value="Assisted Living"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-home-radio3"
+                  >
+                    Assisted Living
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Home:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="family"
+                    name="netsmartcloud-roc-home-check"
+                    id="netsmartcloud-roc-home-check1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-home-check1"
+                  >
+                    Family
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="PCG"
+                    name="netsmartcloud-roc-home-check"
+                    id="netsmartcloud-roc-home-check2"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-home-check2"
+                  >
+                    PCG
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="alone"
+                    name="netsmartcloud-roc-home-check"
+                    id="netsmartcloud-roc-home-check3"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-home-check3"
+                  >
+                    Alone
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Diagnosis:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="wound"
+                    name="netsmartcloud-roc-diagnosis-check"
+                    id="netsmartcloud-roc-diagnosis-check1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-diagnosis-check1"
+                  >
+                    Wound
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="trach"
+                    name="netsmartcloud-roc-diagnosis-check"
+                    id="netsmartcloud-roc-diagnosis-check2"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-diagnosis-check2"
+                  >
+                    Trach
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="ESRD"
+                    name="netsmartcloud-roc-diagnosis-check"
+                    id="netsmartcloud-roc-diagnosis-check3"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-diagnosis-check3"
+                  >
+                    ESRD
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="PICC Line"
+                    name="netsmartcloud-roc-diagnosis-check"
+                    id="netsmartcloud-roc-diagnosis-check4"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-diagnosis-check4"
+                  >
+                    PICC Line
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="G-Tube"
+                    name="netsmartcloud-roc-diagnosis-check"
+                    id="netsmartcloud-roc-diagnosis-check5"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-diagnosis-check5"
+                  >
+                    G-Tube
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="CHF"
+                    name="netsmartcloud-roc-diagnosis-check"
+                    id="netsmartcloud-roc-diagnosis-check6"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-diagnosis-check6"
+                  >
+                    CHF
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="DM1"
+                    name="netsmartcloud-roc-diagnosis-check"
+                    id="netsmartcloud-roc-diagnosis-check7"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-diagnosis-check7"
+                  >
+                    DM1
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="DM2"
+                    name="netsmartcloud-roc-diagnosis-check"
+                    id="netsmartcloud-roc-diagnosis-check8"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-diagnosis-check8"
+                  >
+                    DM2
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Foley"
+                    name="netsmartcloud-roc-diagnosis-check"
+                    id="netsmartcloud-roc-diagnosis-check9"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-diagnosis-check9"
+                  >
+                    Foley
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Precautions:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="fall"
+                    name="netsmartcloud-roc-precautions-check"
+                    id="netsmartcloud-roc-precautions-check1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-precautions-check1"
+                  >
+                    Fall
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="braden"
+                    name="netsmartcloud-roc-precautions-check"
+                    id="netsmartcloud-roc-precautions-check2"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-precautions-check2"
+                  >
+                    Braden
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="oxygen"
+                    name="netsmartcloud-roc-precautions-check"
+                    id="netsmartcloud-roc-precautions-check3"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-precautions-check3"
+                  >
+                    Oxygen
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="aspiration"
+                    name="netsmartcloud-roc-precautions-check"
+                    id="netsmartcloud-roc-precautions-check4"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-precautions-check4"
+                  >
+                    Aspiration
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="seizure"
+                    name="netsmartcloud-roc-precautions-check"
+                    id="netsmartcloud-roc-precautions-check5"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-roc-precautions-check5"
+                  >
+                    Seizure
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto mt-4">
+              <button type="submit" class="btn btn-primary">Start</button>
+            </div>
+          </form>
+        </div>
+
+        <div
+          class="tab-pane fade"
+          id="netsmartcloud-followup-tab-pane"
+          role="tabpanel"
+          aria-labelledby="netsmartcloud-followup-tab"
+          tabindex="0"
+        >
+          <form id="netsmartcloud-followup-form">
+            <div class="row">
+              <div class="col-3">ADLs:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-followup-adl-radio"
+                    id="netsmartcloud-followup-adl-radio1"
+                    value="#0"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-adl-radio1"
+                  >
+                    #0
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-followup-adl-radio"
+                    id="netsmartcloud-followup-adl-radio2"
+                    value="#1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-adl-radio2"
+                  >
+                    #1
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-followup-adl-radio"
+                    id="netsmartcloud-followup-adl-radio3"
+                    value="#2"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-adl-radio3"
+                  >
+                    #2
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-followup-adl-radio"
+                    id="netsmartcloud-followup-adl-radio4"
+                    value="#3"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-adl-radio4"
+                  >
+                    #3
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-followup-adl-radio"
+                    id="netsmartcloud-followup-adl-radio5"
+                    value="#4"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-adl-radio5"
+                  >
+                    #4
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">DME:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-followup-dme-radio"
+                    id="netsmartcloud-followup-dme-radio1"
+                    value="cane"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-dme-radio1"
+                  >
+                    Cane
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-followup-dme-radio"
+                    id="netsmartcloud-followup-dme-radio2"
+                    value="walker"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-dme-radio2"
+                  >
+                    Walker
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-followup-dme-radio"
+                    id="netsmartcloud-followup-dme-radio3"
+                    value="wheelchair"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-dme-radio3"
+                  >
+                    Wheelchair
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Mental:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check w-100">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-followup-mental-radio"
+                    id="netsmartcloud-followup-mental-radio1"
+                    value="A/A/Ox4"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-mental-radio1"
+                  >
+                    A/A/Ox4
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-followup-mental-radio"
+                    id="netsmartcloud-followup-mental-radio2"
+                    value="forgetful/confused"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-mental-radio2"
+                  >
+                    Forgetful/Confused
+                  </label>
+                </div>
+                <div class="form-check ms-5">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-followup-mental-radio"
+                    id="netsmartcloud-followup-mental-radio3"
+                    value="able to follow command"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-mental-radio3"
+                  >
+                    able to follow command
+                  </label>
+                </div>
+                <div class="form-check ms-5">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-followup-mental-radio"
+                    id="netsmartcloud-followup-mental-radio4"
+                    value="unable to follow command"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-mental-radio4"
+                  >
+                    unable to follow command
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-followup-mental-radio"
+                    id="netsmartcloud-followup-mental-radio5"
+                    value="n/a"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-mental-radio5"
+                  >
+                    N/A
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Pain:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-followup-pain-radio"
+                    id="netsmartcloud-followup-pain-radio1"
+                    value="pain"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-pain-radio1"
+                  >
+                    Pain
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-followup-pain-radio"
+                    id="netsmartcloud-followup-pain-radio2"
+                    value="nopain"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-pain-radio2"
+                  >
+                    No Pain
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Home:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-followup-home-radio"
+                    id="netsmartcloud-followup-home-radio1"
+                    value="home"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-home-radio1"
+                  >
+                    Home
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-followup-home-radio"
+                    id="netsmartcloud-followup-home-radio2"
+                    value="B&C"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-home-radio2"
+                  >
+                    B&C
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-followup-home-radio"
+                    id="netsmartcloud-followup-home-radio3"
+                    value="Assisted Living"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-home-radio3"
+                  >
+                    Assisted Living
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Home:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="family"
+                    name="netsmartcloud-followup-home-check"
+                    id="netsmartcloud-followup-home-check1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-home-check1"
+                  >
+                    Family
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="PCG"
+                    name="netsmartcloud-followup-home-check"
+                    id="netsmartcloud-followup-home-check2"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-home-check2"
+                  >
+                    PCG
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="alone"
+                    name="netsmartcloud-followup-home-check"
+                    id="netsmartcloud-followup-home-check3"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-home-check3"
+                  >
+                    Alone
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Diagnosis:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="wound"
+                    name="netsmartcloud-followup-diagnosis-check"
+                    id="netsmartcloud-followup-diagnosis-check1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-diagnosis-check1"
+                  >
+                    Wound
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="trach"
+                    name="netsmartcloud-followup-diagnosis-check"
+                    id="netsmartcloud-followup-diagnosis-check2"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-diagnosis-check2"
+                  >
+                    Trach
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="ESRD"
+                    name="netsmartcloud-followup-diagnosis-check"
+                    id="netsmartcloud-followup-diagnosis-check3"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-diagnosis-check3"
+                  >
+                    ESRD
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="PICC Line"
+                    name="netsmartcloud-followup-diagnosis-check"
+                    id="netsmartcloud-followup-diagnosis-check4"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-diagnosis-check4"
+                  >
+                    PICC Line
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="G-Tube"
+                    name="netsmartcloud-followup-diagnosis-check"
+                    id="netsmartcloud-followup-diagnosis-check5"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-diagnosis-check5"
+                  >
+                    G-Tube
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="CHF"
+                    name="netsmartcloud-followup-diagnosis-check"
+                    id="netsmartcloud-followup-diagnosis-check6"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-diagnosis-check6"
+                  >
+                    CHF
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="DM1"
+                    name="netsmartcloud-followup-diagnosis-check"
+                    id="netsmartcloud-followup-diagnosis-check7"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-diagnosis-check7"
+                  >
+                    DM1
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="DM2"
+                    name="netsmartcloud-followup-diagnosis-check"
+                    id="netsmartcloud-followup-diagnosis-check8"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-diagnosis-check8"
+                  >
+                    DM2
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Foley"
+                    name="netsmartcloud-followup-diagnosis-check"
+                    id="netsmartcloud-followup-diagnosis-check9"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-diagnosis-check9"
+                  >
+                    Foley
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Precautions:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="fall"
+                    name="netsmartcloud-followup-precautions-check"
+                    id="netsmartcloud-followup-precautions-check1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-precautions-check1"
+                  >
+                    Fall
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="braden"
+                    name="netsmartcloud-followup-precautions-check"
+                    id="netsmartcloud-followup-precautions-check2"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-precautions-check2"
+                  >
+                    Braden
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="oxygen"
+                    name="netsmartcloud-followup-precautions-check"
+                    id="netsmartcloud-followup-precautions-check3"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-precautions-check3"
+                  >
+                    Oxygen
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="aspiration"
+                    name="netsmartcloud-followup-precautions-check"
+                    id="netsmartcloud-followup-precautions-check4"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-precautions-check4"
+                  >
+                    Aspiration
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="seizure"
+                    name="netsmartcloud-followup-precautions-check"
+                    id="netsmartcloud-followup-precautions-check5"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-followup-precautions-check5"
+                  >
+                    Seizure
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto mt-4">
+              <button type="submit" class="btn btn-primary">Start</button>
+            </div>
+          </form>
+        </div>
+
+        <div
+          class="tab-pane fade"
+          id="netsmartcloud-recert-tab-pane"
+          role="tabpanel"
+          aria-labelledby="netsmartcloud-recert-tab"
+          tabindex="0"
+        >
+          <form id="netsmartcloud-recert-form">
+            <div class="row">
+              <div class="col-3">ADLs:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-recert-adl-radio"
+                    id="netsmartcloud-recert-adl-radio1"
+                    value="#0"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-adl-radio1"
+                  >
+                    #0
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-recert-adl-radio"
+                    id="netsmartcloud-recert-adl-radio2"
+                    value="#1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-adl-radio2"
+                  >
+                    #1
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-recert-adl-radio"
+                    id="netsmartcloud-recert-adl-radio3"
+                    value="#2"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-adl-radio3"
+                  >
+                    #2
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-recert-adl-radio"
+                    id="netsmartcloud-recert-adl-radio4"
+                    value="#3"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-adl-radio4"
+                  >
+                    #3
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-recert-adl-radio"
+                    id="netsmartcloud-recert-adl-radio5"
+                    value="#4"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-adl-radio5"
+                  >
+                    #4
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">DME:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-recert-dme-radio"
+                    id="netsmartcloud-recert-dme-radio1"
+                    value="cane"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-dme-radio1"
+                  >
+                    Cane
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-recert-dme-radio"
+                    id="netsmartcloud-recert-dme-radio2"
+                    value="walker"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-dme-radio2"
+                  >
+                    Walker
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-recert-dme-radio"
+                    id="netsmartcloud-recert-dme-radio3"
+                    value="wheelchair"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-dme-radio3"
+                  >
+                    Wheelchair
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Mental:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check w-100">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-recert-mental-radio"
+                    id="netsmartcloud-recert-mental-radio1"
+                    value="A/A/Ox4"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-mental-radio1"
+                  >
+                    A/A/Ox4
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-recert-mental-radio"
+                    id="netsmartcloud-recert-mental-radio2"
+                    value="forgetful/confused"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-mental-radio2"
+                  >
+                    Forgetful/Confused
+                  </label>
+                </div>
+                <div class="form-check ms-5">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-recert-mental-radio"
+                    id="netsmartcloud-recert-mental-radio3"
+                    value="able to follow command"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-mental-radio3"
+                  >
+                    able to follow command
+                  </label>
+                </div>
+                <div class="form-check ms-5">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-recert-mental-radio"
+                    id="netsmartcloud-recert-mental-radio4"
+                    value="unable to follow command"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-mental-radio4"
+                  >
+                    unable to follow command
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-recert-mental-radio"
+                    id="netsmartcloud-recert-mental-radio5"
+                    value="n/a"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-mental-radio5"
+                  >
+                    N/A
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Pain:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-recert-pain-radio"
+                    id="netsmartcloud-recert-pain-radio1"
+                    value="pain"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-pain-radio1"
+                  >
+                    Pain
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-recert-pain-radio"
+                    id="netsmartcloud-recert-pain-radio2"
+                    value="nopain"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-pain-radio2"
+                  >
+                    No Pain
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Home:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-recert-home-radio"
+                    id="netsmartcloud-recert-home-radio1"
+                    value="home"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-home-radio1"
+                  >
+                    Home
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-recert-home-radio"
+                    id="netsmartcloud-recert-home-radio2"
+                    value="B&C"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-home-radio2"
+                  >
+                    B&C
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-recert-home-radio"
+                    id="netsmartcloud-recert-home-radio3"
+                    value="Assisted Living"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-home-radio3"
+                  >
+                    Assisted Living
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Home:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="family"
+                    name="netsmartcloud-recert-home-check"
+                    id="netsmartcloud-recert-home-check1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-home-check1"
+                  >
+                    Family
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="PCG"
+                    name="netsmartcloud-recert-home-check"
+                    id="netsmartcloud-recert-home-check2"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-home-check2"
+                  >
+                    PCG
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="alone"
+                    name="netsmartcloud-recert-home-check"
+                    id="netsmartcloud-recert-home-check3"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-home-check3"
+                  >
+                    Alone
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Diagnosis:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="wound"
+                    name="netsmartcloud-recert-diagnosis-check"
+                    id="netsmartcloud-recert-diagnosis-check1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-diagnosis-check1"
+                  >
+                    Wound
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="trach"
+                    name="netsmartcloud-recert-diagnosis-check"
+                    id="netsmartcloud-recert-diagnosis-check2"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-diagnosis-check2"
+                  >
+                    Trach
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="ESRD"
+                    name="netsmartcloud-recert-diagnosis-check"
+                    id="netsmartcloud-recert-diagnosis-check3"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-diagnosis-check3"
+                  >
+                    ESRD
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="PICC Line"
+                    name="netsmartcloud-recert-diagnosis-check"
+                    id="netsmartcloud-recert-diagnosis-check4"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-diagnosis-check4"
+                  >
+                    PICC Line
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="G-Tube"
+                    name="netsmartcloud-recert-diagnosis-check"
+                    id="netsmartcloud-recert-diagnosis-check5"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-diagnosis-check5"
+                  >
+                    G-Tube
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="CHF"
+                    name="netsmartcloud-recert-diagnosis-check"
+                    id="netsmartcloud-recert-diagnosis-check6"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-diagnosis-check6"
+                  >
+                    CHF
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="DM1"
+                    name="netsmartcloud-recert-diagnosis-check"
+                    id="netsmartcloud-recert-diagnosis-check7"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-diagnosis-check7"
+                  >
+                    DM1
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="DM2"
+                    name="netsmartcloud-recert-diagnosis-check"
+                    id="netsmartcloud-recert-diagnosis-check8"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-diagnosis-check8"
+                  >
+                    DM2
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Foley"
+                    name="netsmartcloud-recert-diagnosis-check"
+                    id="netsmartcloud-recert-diagnosis-check9"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-diagnosis-check9"
+                  >
+                    Foley
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Precautions:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="fall"
+                    name="netsmartcloud-recert-precautions-check"
+                    id="netsmartcloud-recert-precautions-check1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-precautions-check1"
+                  >
+                    Fall
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="braden"
+                    name="netsmartcloud-recert-precautions-check"
+                    id="netsmartcloud-recert-precautions-check2"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-precautions-check2"
+                  >
+                    Braden
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="oxygen"
+                    name="netsmartcloud-recert-precautions-check"
+                    id="netsmartcloud-recert-precautions-check3"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-precautions-check3"
+                  >
+                    Oxygen
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="aspiration"
+                    name="netsmartcloud-recert-precautions-check"
+                    id="netsmartcloud-recert-precautions-check4"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-precautions-check4"
+                  >
+                    Aspiration
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="seizure"
+                    name="netsmartcloud-recert-precautions-check"
+                    id="netsmartcloud-recert-precautions-check5"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-recert-precautions-check5"
+                  >
+                    Seizure
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto mt-4">
+              <button type="submit" class="btn btn-primary">Start</button>
+            </div>
+          </form>
+        </div>
+
+        <div
+          class="tab-pane fade"
+          id="netsmartcloud-discharge-tab-pane"
+          role="tabpanel"
+          aria-labelledby="netsmartcloud-discharge-tab"
+          tabindex="0"
+        >
+          <form id="netsmartcloud-discharge-form">
+            <div class="row">
+              <div class="col-3">ADLs:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-discharge-adl-radio"
+                    id="netsmartcloud-discharge-adl-radio1"
+                    value="#0"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-adl-radio1"
+                  >
+                    #0
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-discharge-adl-radio"
+                    id="netsmartcloud-discharge-adl-radio2"
+                    value="#1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-adl-radio2"
+                  >
+                    #1
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-discharge-adl-radio"
+                    id="netsmartcloud-discharge-adl-radio3"
+                    value="#2"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-adl-radio3"
+                  >
+                    #2
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-discharge-adl-radio"
+                    id="netsmartcloud-discharge-adl-radio4"
+                    value="#3"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-adl-radio4"
+                  >
+                    #3
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-discharge-adl-radio"
+                    id="netsmartcloud-discharge-adl-radio5"
+                    value="#4"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-adl-radio5"
+                  >
+                    #4
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">DME:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-discharge-dme-radio"
+                    id="netsmartcloud-discharge-dme-radio1"
+                    value="cane"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-dme-radio1"
+                  >
+                    Cane
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-discharge-dme-radio"
+                    id="netsmartcloud-discharge-dme-radio2"
+                    value="walker"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-dme-radio2"
+                  >
+                    Walker
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-discharge-dme-radio"
+                    id="netsmartcloud-discharge-dme-radio3"
+                    value="wheelchair"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-dme-radio3"
+                  >
+                    Wheelchair
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Mental:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check w-100">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-discharge-mental-radio"
+                    id="netsmartcloud-discharge-mental-radio1"
+                    value="A/A/Ox4"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-mental-radio1"
+                  >
+                    A/A/Ox4
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-discharge-mental-radio"
+                    id="netsmartcloud-discharge-mental-radio2"
+                    value="forgetful/confused"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-mental-radio2"
+                  >
+                    Forgetful/Confused
+                  </label>
+                </div>
+                <div class="form-check ms-5">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-discharge-mental-radio"
+                    id="netsmartcloud-discharge-mental-radio3"
+                    value="able to follow command"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-mental-radio3"
+                  >
+                    able to follow command
+                  </label>
+                </div>
+                <div class="form-check ms-5">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-discharge-mental-radio"
+                    id="netsmartcloud-discharge-mental-radio4"
+                    value="unable to follow command"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-mental-radio4"
+                  >
+                    unable to follow command
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-discharge-mental-radio"
+                    id="netsmartcloud-discharge-mental-radio5"
+                    value="n/a"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-mental-radio5"
+                  >
+                    N/A
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Pain:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-discharge-pain-radio"
+                    id="netsmartcloud-discharge-pain-radio1"
+                    value="pain"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-pain-radio1"
+                  >
+                    Pain
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-discharge-pain-radio"
+                    id="netsmartcloud-discharge-pain-radio2"
+                    value="nopain"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-pain-radio2"
+                  >
+                    No Pain
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Home:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-discharge-home-radio"
+                    id="netsmartcloud-discharge-home-radio1"
+                    value="home"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-home-radio1"
+                  >
+                    Home
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-discharge-home-radio"
+                    id="netsmartcloud-discharge-home-radio2"
+                    value="B&C"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-home-radio2"
+                  >
+                    B&C
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="netsmartcloud-discharge-home-radio"
+                    id="netsmartcloud-discharge-home-radio3"
+                    value="Assisted Living"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-home-radio3"
+                  >
+                    Assisted Living
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Home:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="family"
+                    name="netsmartcloud-discharge-home-check"
+                    id="netsmartcloud-discharge-home-check1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-home-check1"
+                  >
+                    Family
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="PCG"
+                    name="netsmartcloud-discharge-home-check"
+                    id="netsmartcloud-discharge-home-check2"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-home-check2"
+                  >
+                    PCG
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="alone"
+                    name="netsmartcloud-discharge-home-check"
+                    id="netsmartcloud-discharge-home-check3"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-home-check3"
+                  >
+                    Alone
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Diagnosis:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="wound"
+                    name="netsmartcloud-discharge-diagnosis-check"
+                    id="netsmartcloud-discharge-diagnosis-check1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-diagnosis-check1"
+                  >
+                    Wound
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="trach"
+                    name="netsmartcloud-discharge-diagnosis-check"
+                    id="netsmartcloud-discharge-diagnosis-check2"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-diagnosis-check2"
+                  >
+                    Trach
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="ESRD"
+                    name="netsmartcloud-discharge-diagnosis-check"
+                    id="netsmartcloud-discharge-diagnosis-check3"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-diagnosis-check3"
+                  >
+                    ESRD
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="PICC Line"
+                    name="netsmartcloud-discharge-diagnosis-check"
+                    id="netsmartcloud-discharge-diagnosis-check4"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-diagnosis-check4"
+                  >
+                    PICC Line
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="G-Tube"
+                    name="netsmartcloud-discharge-diagnosis-check"
+                    id="netsmartcloud-discharge-diagnosis-check5"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-diagnosis-check5"
+                  >
+                    G-Tube
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="CHF"
+                    name="netsmartcloud-discharge-diagnosis-check"
+                    id="netsmartcloud-discharge-diagnosis-check6"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-diagnosis-check6"
+                  >
+                    CHF
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="DM1"
+                    name="netsmartcloud-discharge-diagnosis-check"
+                    id="netsmartcloud-discharge-diagnosis-check7"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-diagnosis-check7"
+                  >
+                    DM1
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="DM2"
+                    name="netsmartcloud-discharge-diagnosis-check"
+                    id="netsmartcloud-discharge-diagnosis-check8"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-diagnosis-check8"
+                  >
+                    DM2
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Foley"
+                    name="netsmartcloud-discharge-diagnosis-check"
+                    id="netsmartcloud-discharge-diagnosis-check9"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-diagnosis-check9"
+                  >
+                    Foley
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Precautions:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="fall"
+                    name="netsmartcloud-discharge-precautions-check"
+                    id="netsmartcloud-discharge-precautions-check1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-precautions-check1"
+                  >
+                    Fall
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="braden"
+                    name="netsmartcloud-discharge-precautions-check"
+                    id="netsmartcloud-discharge-precautions-check2"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-precautions-check2"
+                  >
+                    Braden
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="oxygen"
+                    name="netsmartcloud-discharge-precautions-check"
+                    id="netsmartcloud-discharge-precautions-check3"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-precautions-check3"
+                  >
+                    Oxygen
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="aspiration"
+                    name="netsmartcloud-discharge-precautions-check"
+                    id="netsmartcloud-discharge-precautions-check4"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-precautions-check4"
+                  >
+                    Aspiration
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="seizure"
+                    name="netsmartcloud-discharge-precautions-check"
+                    id="netsmartcloud-discharge-precautions-check5"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="netsmartcloud-discharge-precautions-check5"
+                  >
+                    Seizure
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto mt-4">
+              <button type="submit" class="btn btn-primary">Start</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-none start-fill-loader mb-5 d-flex justify-content-center">
+      <div class="spinner-border text-primary spinner-border-sm" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+      <div
+        id="toast-error"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="alert alert-danger m-0" role="alert"></div>
+      </div>
+    </div>
+
+    <script src="../scripts/imports/js/jquery.min.js"></script>
+    <script src="../scripts/imports/js/popper.min.js"></script>
+    <script src="../scripts/imports/js/bootstrap.min.js"></script>
+    <script type="module" src="./popup.js"></script>
+  </body>
+</html>
