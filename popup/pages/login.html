@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../scripts/imports/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/login.css" />
+    <script src="../assets/js/validate.js"></script>
+    <title>Login</title>
+  </head>
+  <body>
+    <div>
+      <form id="sign-in-form">
+        <h1>Sign In</h1>
+        <div class="social-container">
+          <div class="social-item hover-pointer google-login-btn">
+            <span>
+              <img
+                class="social"
+                width="20px"
+                src="../assets/images/google_logo.png"
+              />
+            </span>
+            <span style="margin-left: 10px"> Sign In With Google </span>
+          </div>
+          <div
+            class="d-none spinner-social-login spinner-border text-primary spinner-border-sm"
+            role="status"
+          >
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+        <span>or use your account</span>
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <a
+          class="form-toggle hover-pointer"
+          data-form-active="#sign-up-form"
+          data-form-hide="#sign-in-form"
+          >Don't have an account?</a
+        >
+        <button type="submit" class="hover-pointer">Sign In</button>
+        <div
+          class="d-none spinner-login spinner-border text-primary spinner-border-sm"
+          role="status"
+        >
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </form>
+      <form id="sign-up-form" class="d-none">
+        <h1>Sign Up</h1>
+        <div class="social-container">
+          <div class="social-item hover-pointer google-login-btn">
+            <span>
+              <img
+                class="social"
+                width="20px"
+                src="../assets/images/google_logo.png"
+              />
+            </span>
+            <span style="margin-left: 10px"> Sign Up With Google </span>
+          </div>
+          <div
+            class="d-none spinner-social-login spinner-border text-primary spinner-border-sm"
+            role="status"
+          >
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+        <span>or use your account</span>
+        <input type="name" placeholder="Full Name" />
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <a
+          class="form-toggle hover-pointer"
+          data-form-active="#sign-in-form"
+          data-form-hide="#sign-up-form"
+          >Have an account?</a
+        >
+        <button type="submit" class="hover-pointer">Sign Up</button>
+        <div
+          class="d-none spinner-login spinner-border text-primary spinner-border-sm"
+          role="status"
+        >
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </form>
+
+      <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div
+          id="toast-error"
+          class="toast"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="alert alert-danger m-0" role="alert"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../scripts/imports/js/jquery.min.js"></script>
+    <script src="../../scripts/imports/js/bootstrap.min.js"></script>
+    <script type="module" src="../assets/js/login.js"></script>
+  </body>
+</html>

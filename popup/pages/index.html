@@ -1,0 +1,3457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link rel="stylesheet" href="../../scripts/imports/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../assets/js/validate.js"></script>
+    <title>Form Automation</title>
+  </head>
+  <body>
+    <div class="mt-4">
+      <div class="row align-items-center">
+        <div class="col-3 text-start fw-bolder">LOGO HERE</div>
+        <div class="col-7 text-center">
+          <select class="website-select form-select hover-pointer">
+            <option
+              selected
+              value="alliancehs"
+              data-container="#alliancehs_website_form"
+            >
+              Alliancehs
+            </option>
+            <option
+              value="tarlani_mobile"
+              data-container="#tarlani_mobile_website_form"
+            >
+              Tarlani Mobile
+            </option>
+            <option value="kinnser" data-container="#kinnser_website_form">
+              Kinnser
+            </option>
+            <option value="hospicemd" data-container="#hospicemd_website_form">
+              hospicemd
+            </option>
+            <option value="COM" data-container="#COM_website_form">COM</option>
+            <!-- <option value="other" data-container="other">Other</option> -->
+          </select>
+        </div>
+        <div class="col-2 text-end">
+          <div class="dropdown">
+            <a
+              class="btn"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                class="profile-icon-image rounded-circle"
+                width="40px"
+                src="../assets/images/profile_icon.png"
+              />
+            </a>
+
+            <ul class="dropdown-menu profile-icon-options"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="alliancehs_website_form"
+      class="container mt-4 mb-5 website-form-container"
+    >
+      <ul class="nav nav-pills" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="soc-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#soc-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="soc-tab-pane"
+            aria-selected="true"
+          >
+            SOC
+          </button>
+        </li>
+        <!-- <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="roc-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#roc-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="roc-tab-pane"
+            aria-selected="false"
+          >
+            ROC
+          </button>
+        </li> -->
+      </ul>
+      <div class="tab-content mt-3 container" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="soc-tab-pane"
+          role="tabpanel"
+          aria-labelledby="soc-tab"
+          tabindex="0"
+        >
+          <form id="soc-form">
+            <div class="row">
+              <div class="col-3">ADLs:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-adl-radio"
+                    id="soc-adl-radio1"
+                    value="#0"
+                  />
+                  <label class="form-check-label" for="soc-adl-radio1">
+                    #0
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-adl-radio"
+                    id="soc-adl-radio2"
+                    value="#1"
+                  />
+                  <label class="form-check-label" for="soc-adl-radio2">
+                    #1
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-adl-radio"
+                    id="soc-adl-radio3"
+                    value="#2"
+                  />
+                  <label class="form-check-label" for="soc-adl-radio3">
+                    #2
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-adl-radio"
+                    id="soc-adl-radio4"
+                    value="#3"
+                  />
+                  <label class="form-check-label" for="soc-adl-radio4">
+                    #3
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-adl-radio"
+                    id="soc-adl-radio5"
+                    value="#4"
+                  />
+                  <label class="form-check-label" for="soc-adl-radio5">
+                    #4
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">DME:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-dme-radio"
+                    id="soc-dme-radio1"
+                    value="cane"
+                  />
+                  <label class="form-check-label" for="soc-dme-radio1">
+                    Cane
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-dme-radio"
+                    id="soc-dme-radio2"
+                    value="walker"
+                  />
+                  <label class="form-check-label" for="soc-dme-radio2">
+                    Walker
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-dme-radio"
+                    id="soc-dme-radio3"
+                    value="wheelchair"
+                  />
+                  <label class="form-check-label" for="soc-dme-radio3">
+                    Wheelchair
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Mental:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check w-100">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-mental-radio"
+                    id="soc-mental-radio1"
+                    value="A/A/Ox4"
+                  />
+                  <label class="form-check-label" for="soc-mental-radio1">
+                    A/A/Ox4
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-mental-radio"
+                    id="soc-mental-radio2"
+                    value="forgetful/confused"
+                  />
+                  <label class="form-check-label" for="soc-mental-radio2">
+                    Forgetful/Confused
+                  </label>
+                </div>
+                <div class="form-check ms-5">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-mental-radio"
+                    id="soc-mental-radio3"
+                    value="able to follow command"
+                  />
+                  <label class="form-check-label" for="soc-mental-radio3">
+                    able to follow command
+                  </label>
+                </div>
+                <div class="form-check ms-5">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-mental-radio"
+                    id="soc-mental-radio4"
+                    value="unable to follow command"
+                  />
+                  <label class="form-check-label" for="soc-mental-radio4">
+                    unable to follow command
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-mental-radio"
+                    id="soc-mental-radio5"
+                    value="n/a"
+                  />
+                  <label class="form-check-label" for="soc-mental-radio5">
+                    N/A
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Pain:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-pain-radio"
+                    id="soc-pain-radio1"
+                    value="pain"
+                  />
+                  <label class="form-check-label" for="soc-pain-radio1">
+                    Pain
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-pain-radio"
+                    id="soc-pain-radio2"
+                    value="nopain"
+                  />
+                  <label class="form-check-label" for="soc-pain-radio2">
+                    No Pain
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Home:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-home-radio"
+                    id="soc-home-radio1"
+                    value="home"
+                  />
+                  <label class="form-check-label" for="soc-home-radio1">
+                    Home
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-home-radio"
+                    id="soc-home-radio2"
+                    value="B&C"
+                  />
+                  <label class="form-check-label" for="soc-home-radio2">
+                    B&C
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-home-radio"
+                    id="soc-home-radio3"
+                    value="Assisted Living"
+                  />
+                  <label class="form-check-label" for="soc-home-radio3">
+                    Assisted Living
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Home:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="family"
+                    name="soc-home-check"
+                    id="soc-home-check1"
+                  />
+                  <label class="form-check-label" for="soc-home-check1">
+                    Family
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="PCG"
+                    name="soc-home-check"
+                    id="soc-home-check2"
+                  />
+                  <label class="form-check-label" for="soc-home-check2">
+                    PCG
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="alone"
+                    name="soc-home-check"
+                    id="soc-home-check3"
+                  />
+                  <label class="form-check-label" for="soc-home-check3">
+                    Alone
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Diagnosis:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="wound"
+                    name="soc-diagnosis-check"
+                    id="soc-diagnosis-check1"
+                  />
+                  <label class="form-check-label" for="soc-diagnosis-check1">
+                    Wound
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="trach"
+                    name="soc-diagnosis-check"
+                    id="soc-diagnosis-check2"
+                  />
+                  <label class="form-check-label" for="soc-diagnosis-check2">
+                    Trach
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="ESRD"
+                    name="soc-diagnosis-check"
+                    id="soc-diagnosis-check3"
+                  />
+                  <label class="form-check-label" for="soc-diagnosis-check3">
+                    ESRD
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="PICC Line"
+                    name="soc-diagnosis-check"
+                    id="soc-diagnosis-check4"
+                  />
+                  <label class="form-check-label" for="soc-diagnosis-check4">
+                    PICC Line
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="G-Tube"
+                    name="soc-diagnosis-check"
+                    id="soc-diagnosis-check5"
+                  />
+                  <label class="form-check-label" for="soc-diagnosis-check5">
+                    G-Tube
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="CHF"
+                    name="soc-diagnosis-check"
+                    id="soc-diagnosis-check6"
+                  />
+                  <label class="form-check-label" for="soc-diagnosis-check6">
+                    CHF
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="DM1"
+                    name="soc-diagnosis-check"
+                    id="soc-diagnosis-check7"
+                  />
+                  <label class="form-check-label" for="soc-diagnosis-check7">
+                    DM1
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="DM2"
+                    name="soc-diagnosis-check"
+                    id="soc-diagnosis-check8"
+                  />
+                  <label class="form-check-label" for="soc-diagnosis-check8">
+                    DM2
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Foley"
+                    name="soc-diagnosis-check"
+                    id="soc-diagnosis-check9"
+                  />
+                  <label class="form-check-label" for="soc-diagnosis-check9">
+                    Foley
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Precautions:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="fall"
+                    name="soc-precautions-check"
+                    id="soc-precautions-check1"
+                  />
+                  <label class="form-check-label" for="soc-precautions-check1">
+                    Fall
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="braden"
+                    name="soc-precautions-check"
+                    id="soc-precautions-check2"
+                  />
+                  <label class="form-check-label" for="soc-precautions-check2">
+                    Braden
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="oxygen"
+                    name="soc-precautions-check"
+                    id="soc-precautions-check3"
+                  />
+                  <label class="form-check-label" for="soc-precautions-check3">
+                    Oxygen
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="aspiration"
+                    name="soc-precautions-check"
+                    id="soc-precautions-check4"
+                  />
+                  <label class="form-check-label" for="soc-precautions-check4">
+                    Aspiration
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="seizure"
+                    name="soc-precautions-check"
+                    id="soc-precautions-check5"
+                  />
+                  <label class="form-check-label" for="soc-precautions-check5">
+                    Seizure
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto mt-4">
+              <button type="submit" class="btn btn-primary">Start</button>
+            </div>
+          </form>
+        </div>
+        <!-- <div
+          class="tab-pane fade"
+          id="roc-tab-pane"
+          role="tabpanel"
+          aria-labelledby="roc-tab"
+          tabindex="0"
+        >
+          ...
+        </div> -->
+      </div>
+    </div>
+
+    <!-- tarlani_mobile website container roc & recert  -->
+
+    <div
+      id="tarlani_mobile_website_form"
+      class="container mt-4 mb-5 website-form-container d-none"
+    >
+      <ul class="nav nav-pills" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="roc-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#roc-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="roc-tab-pane"
+            aria-selected="true"
+          >
+            ROC
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="recert-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#recert-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="recert-tab-pane"
+            aria-selected="false"
+          >
+            Rcert
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content mt-3 container">
+        <div
+          class="tab-pane fade show active"
+          id="roc-tab-pane"
+          role="tabpanel"
+          aria-labelledby="roc-tab"
+          tabindex="0"
+        >
+          <form id="roc-form">
+            <div class="row">
+              <div class="col-3">ADLs:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="roc-adl-radio"
+                    id="roc-adl-radio1"
+                    value="#0"
+                  />
+                  <label class="form-check-label" for="roc-adl-radio1">
+                    #0
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="roc-adl-radio"
+                    id="roc-adl-radio2"
+                    value="#1"
+                  />
+                  <label class="form-check-label" for="roc-adl-radio2">
+                    #1
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="roc-adl-radio"
+                    id="roc-adl-radio3"
+                    value="#2"
+                  />
+                  <label class="form-check-label" for="roc-adl-radio3">
+                    #2
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="roc-adl-radio"
+                    id="roc-adl-radio4"
+                    value="#3"
+                  />
+                  <label class="form-check-label" for="roc-adl-radio4">
+                    #3
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="roc-adl-radio"
+                    id="roc-adl-radio5"
+                    value="#4"
+                  />
+                  <label class="form-check-label" for="roc-adl-radio5">
+                    #4
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">DME:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="roc-dme-radio"
+                    id="roc-dme-radio1"
+                    value="cane"
+                  />
+                  <label class="form-check-label" for="roc-dme-radio1">
+                    Cane
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="roc-dme-radio"
+                    id="roc-dme-radio2"
+                    value="walker"
+                  />
+                  <label class="form-check-label" for="roc-dme-radio2">
+                    Walker
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="roc-dme-radio"
+                    id="roc-dme-radio3"
+                    value="wheelchair"
+                  />
+                  <label class="form-check-label" for="roc-dme-radio3">
+                    Wheelchair
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Mental:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check w-100">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="roc-mental-radio"
+                    id="roc-mental-radio1"
+                    value="A/A/Ox4"
+                  />
+                  <label class="form-check-label" for="roc-mental-radio1">
+                    A/A/Ox4
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="roc-mental-radio"
+                    id="roc-mental-radio2"
+                    value="forgetful/confused"
+                  />
+                  <label class="form-check-label" for="roc-mental-radio2">
+                    Forgetful/Confused
+                  </label>
+                </div>
+                <div class="form-check ms-5">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="roc-mental-radio"
+                    id="roc-mental-radio3"
+                    value="able to follow command"
+                  />
+                  <label class="form-check-label" for="roc-mental-radio3">
+                    able to follow command
+                  </label>
+                </div>
+                <div class="form-check ms-5">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="roc-mental-radio"
+                    id="roc-mental-radio4"
+                    value="unable to follow command"
+                  />
+                  <label class="form-check-label" for="roc-mental-radio4">
+                    unable to follow command
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="roc-mental-radio"
+                    id="roc-mental-radio5"
+                    value="n/a"
+                  />
+                  <label class="form-check-label" for="roc-mental-radio5">
+                    N/A
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Pain:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="roc-pain-radio"
+                    id="roc-pain-radio1"
+                    value="pain"
+                  />
+                  <label class="form-check-label" for="roc-pain-radio1">
+                    Pain
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="roc-pain-radio"
+                    id="roc-pain-radio2"
+                    value="nopain"
+                  />
+                  <label class="form-check-label" for="roc-pain-radio2">
+                    No Pain
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Home:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="roc-home-radio"
+                    id="roc-home-radio1"
+                    value="home"
+                  />
+                  <label class="form-check-label" for="roc-home-radio1">
+                    Home
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="roc-home-radio"
+                    id="roc-home-radio2"
+                    value="B&C"
+                  />
+                  <label class="form-check-label" for="roc-home-radio2">
+                    B&C
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="roc-home-radio"
+                    id="roc-home-radio3"
+                    value="Assisted Living"
+                  />
+                  <label class="form-check-label" for="roc-home-radio3">
+                    Assisted Living
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Home:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="family"
+                    name="roc-home-check"
+                    id="roc-home-check1"
+                  />
+                  <label class="form-check-label" for="roc-home-check1">
+                    Family
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="PCG"
+                    name="roc-home-check"
+                    id="roc-home-check2"
+                  />
+                  <label class="form-check-label" for="roc-home-check2">
+                    PCG
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="alone"
+                    name="roc-home-check"
+                    id="roc-home-check3"
+                  />
+                  <label class="form-check-label" for="roc-home-check3">
+                    Alone
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Diagnosis:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="wound"
+                    name="roc-diagnosis-check"
+                    id="roc-diagnosis-check1"
+                  />
+                  <label class="form-check-label" for="roc-diagnosis-check1">
+                    Wound
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="trach"
+                    name="roc-diagnosis-check"
+                    id="roc-diagnosis-check2"
+                  />
+                  <label class="form-check-label" for="roc-diagnosis-check2">
+                    Trach
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="ESRD"
+                    name="roc-diagnosis-check"
+                    id="roc-diagnosis-check3"
+                  />
+                  <label class="form-check-label" for="roc-diagnosis-check3">
+                    ESRD
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="PICC Line"
+                    name="roc-diagnosis-check"
+                    id="roc-diagnosis-check4"
+                  />
+                  <label class="form-check-label" for="roc-diagnosis-check4">
+                    PICC Line
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="G-Tube"
+                    name="roc-diagnosis-check"
+                    id="roc-diagnosis-check5"
+                  />
+                  <label class="form-check-label" for="roc-diagnosis-check5">
+                    G-Tube
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="CHF"
+                    name="roc-diagnosis-check"
+                    id="roc-diagnosis-check6"
+                  />
+                  <label class="form-check-label" for="roc-diagnosis-check6">
+                    CHF
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="DM1"
+                    name="roc-diagnosis-check"
+                    id="roc-diagnosis-check7"
+                  />
+                  <label class="form-check-label" for="roc-diagnosis-check7">
+                    DM1
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="DM2"
+                    name="roc-diagnosis-check"
+                    id="roc-diagnosis-check8"
+                  />
+                  <label class="form-check-label" for="roc-diagnosis-check8">
+                    DM2
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Foley"
+                    name="roc-diagnosis-check"
+                    id="roc-diagnosis-check9"
+                  />
+                  <label class="form-check-label" for="roc-diagnosis-check9">
+                    Foley
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Precautions:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="fall"
+                    name="roc-precautions-check"
+                    id="roc-precautions-check1"
+                  />
+                  <label class="form-check-label" for="roc-precautions-check1">
+                    Fall
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="braden"
+                    name="roc-precautions-check"
+                    id="roc-precautions-check2"
+                  />
+                  <label class="form-check-label" for="roc-precautions-check2">
+                    Braden
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="oxygen"
+                    name="roc-precautions-check"
+                    id="roc-precautions-check3"
+                  />
+                  <label class="form-check-label" for="roc-precautions-check3">
+                    Oxygen
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="aspiration"
+                    name="roc-precautions-check"
+                    id="roc-precautions-check4"
+                  />
+                  <label class="form-check-label" for="roc-precautions-check4">
+                    Aspiration
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="seizure"
+                    name="roc-precautions-check"
+                    id="roc-precautions-check5"
+                  />
+                  <label class="form-check-label" for="roc-precautions-check5">
+                    Seizure
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto mt-4">
+              <button type="submit" class="btn btn-primary">Start</button>
+            </div>
+          </form>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="recert-tab-pane"
+          role="tabpanel"
+          aria-labelledby="recert-tab"
+          tabindex="0"
+        >
+          <form id="recert-form">
+            <div class="row">
+              <div class="col-3">ADLs:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-adl-radio"
+                    id="recert-adl-radio1"
+                    value="#0"
+                  />
+                  <label class="form-check-label" for="recert-adl-radio1">
+                    #0
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-adl-radio"
+                    id="recert-adl-radio2"
+                    value="#1"
+                  />
+                  <label class="form-check-label" for="recert-adl-radio2">
+                    #1
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-adl-radio"
+                    id="recert-adl-radio3"
+                    value="#2"
+                  />
+                  <label class="form-check-label" for="recert-adl-radio3">
+                    #2
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-adl-radio"
+                    id="recert-adl-radio4"
+                    value="#3"
+                  />
+                  <label class="form-check-label" for="recert-adl-radio4">
+                    #3
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-adl-radio"
+                    id="recert-adl-radio5"
+                    value="#4"
+                  />
+                  <label class="form-check-label" for="recert-adl-radio5">
+                    #4
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">DME:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-dme-radio"
+                    id="recert-dme-radio1"
+                    value="cane"
+                  />
+                  <label class="form-check-label" for="recert-dme-radio1">
+                    Cane
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-dme-radio"
+                    id="recert-dme-radio2"
+                    value="walker"
+                  />
+                  <label class="form-check-label" for="recert-dme-radio2">
+                    Walker
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-dme-radio"
+                    id="recert-dme-radio3"
+                    value="wheelchair"
+                  />
+                  <label class="form-check-label" for="recert-dme-radio3">
+                    Wheelchair
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Mental:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check w-100">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-mental-radio"
+                    id="recert-mental-radio1"
+                    value="A/A/Ox4"
+                  />
+                  <label class="form-check-label" for="recert-mental-radio1">
+                    A/A/Ox4
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-mental-radio"
+                    id="recert-mental-radio2"
+                    value="forgetful/confused"
+                  />
+                  <label class="form-check-label" for="recert-mental-radio2">
+                    Forgetful/Confused
+                  </label>
+                </div>
+                <div class="form-check ms-5">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-mental-radio"
+                    id="recert-mental-radio3"
+                    value="able to follow command"
+                  />
+                  <label class="form-check-label" for="recert-mental-radio3">
+                    able to follow command
+                  </label>
+                </div>
+                <div class="form-check ms-5">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-mental-radio"
+                    id="recert-mental-radio4"
+                    value="unable to follow command"
+                  />
+                  <label class="form-check-label" for="recert-mental-radio4">
+                    unable to follow command
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-mental-radio"
+                    id="recert-mental-radio5"
+                    value="n/a"
+                  />
+                  <label class="form-check-label" for="recert-mental-radio5">
+                    N/A
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Pain:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-pain-radio"
+                    id="recert-pain-radio1"
+                    value="pain"
+                  />
+                  <label class="form-check-label" for="recert-pain-radio1">
+                    Pain
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-pain-radio"
+                    id="recert-pain-radio2"
+                    value="nopain"
+                  />
+                  <label class="form-check-label" for="recert-pain-radio2">
+                    No Pain
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Home:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-home-radio"
+                    id="recert-home-radio1"
+                    value="home"
+                  />
+                  <label class="form-check-label" for="recert-home-radio1">
+                    Home
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-home-radio"
+                    id="recert-home-radio2"
+                    value="B&C"
+                  />
+                  <label class="form-check-label" for="recert-home-radio2">
+                    B&C
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-home-radio"
+                    id="recert-home-radio3"
+                    value="Assisted Living"
+                  />
+                  <label class="form-check-label" for="recert-home-radio3">
+                    Assisted Living
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Home:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="family"
+                    name="recert-home-check"
+                    id="recert-home-check1"
+                  />
+                  <label class="form-check-label" for="recert-home-check1">
+                    Family
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="PCG"
+                    name="recert-home-check"
+                    id="recert-home-check2"
+                  />
+                  <label class="form-check-label" for="recert-home-check2">
+                    PCG
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="alone"
+                    name="recert-home-check"
+                    id="recert-home-check3"
+                  />
+                  <label class="form-check-label" for="recert-home-check3">
+                    Alone
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Diagnosis:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="wound"
+                    name="recert-diagnosis-check"
+                    id="recert-diagnosis-check1"
+                  />
+                  <label class="form-check-label" for="recert-diagnosis-check1">
+                    Wound
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="trach"
+                    name="recert-diagnosis-check"
+                    id="recert-diagnosis-check2"
+                  />
+                  <label class="form-check-label" for="recert-diagnosis-check2">
+                    Trach
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="ESRD"
+                    name="recert-diagnosis-check"
+                    id="recert-diagnosis-check3"
+                  />
+                  <label class="form-check-label" for="recert-diagnosis-check3">
+                    ESRD
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="PICC Line"
+                    name="recert-diagnosis-check"
+                    id="recert-diagnosis-check4"
+                  />
+                  <label class="form-check-label" for="recert-diagnosis-check4">
+                    PICC Line
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="G-Tube"
+                    name="recert-diagnosis-check"
+                    id="recert-diagnosis-check5"
+                  />
+                  <label class="form-check-label" for="recert-diagnosis-check5">
+                    G-Tube
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="CHF"
+                    name="recert-diagnosis-check"
+                    id="recert-diagnosis-check6"
+                  />
+                  <label class="form-check-label" for="recert-diagnosis-check6">
+                    CHF
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="DM1"
+                    name="recert-diagnosis-check"
+                    id="recert-diagnosis-check7"
+                  />
+                  <label class="form-check-label" for="recert-diagnosis-check7">
+                    DM1
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="DM2"
+                    name="recert-diagnosis-check"
+                    id="recert-diagnosis-check8"
+                  />
+                  <label class="form-check-label" for="recert-diagnosis-check8">
+                    DM2
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Foley"
+                    name="recert-diagnosis-check"
+                    id="recert-diagnosis-check9"
+                  />
+                  <label class="form-check-label" for="recert-diagnosis-check9">
+                    Foley
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Precautions:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="fall"
+                    name="recert-precautions-check"
+                    id="recert-precautions-check1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-precautions-check1"
+                  >
+                    Fall
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="braden"
+                    name="recert-precautions-check"
+                    id="recert-precautions-check2"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-precautions-check2"
+                  >
+                    Braden
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="oxygen"
+                    name="recert-precautions-check"
+                    id="recert-precautions-check3"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-precautions-check3"
+                  >
+                    Oxygen
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="aspiration"
+                    name="recert-precautions-check"
+                    id="recert-precautions-check4"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-precautions-check4"
+                  >
+                    Aspiration
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="seizure"
+                    name="recert-precautions-check"
+                    id="recert-precautions-check5"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-precautions-check5"
+                  >
+                    Seizure
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto mt-4">
+              <button type="submit" class="btn btn-primary">Start</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- kinnser webiste forms -->
+
+    <div
+      id="kinnser_website_form"
+      class="container mt-4 mb-5 website-form-container d-none"
+    >
+      <ul class="nav nav-pills" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="soc-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#soc-kinnser-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="soc-kinnser-tab-pane"
+            aria-selected="true"
+          >
+            SOC
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="recert-kinnser-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#recert-kinnser-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="recert-kinnser-tab-pane"
+            aria-selected="false"
+          >
+            Recert
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="followup-kinnser-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#followup-kinnser-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="followup-kinnser-tab-pane"
+            aria-selected="false"
+          >
+            Follow Up
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content mt-3 container" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="soc-kinnser-tab-pane"
+          role="tabpanel"
+          aria-labelledby="soc-tab"
+          tabindex="0"
+        >
+          <form id="soc-form-kinnser">
+            <div class="row">
+              <div class="col-3">ADLs:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-adl-radio"
+                    id="soc-adl-radio1"
+                    value="#0"
+                  />
+                  <label class="form-check-label" for="soc-adl-radio1">
+                    #0
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-adl-radio"
+                    id="soc-adl-radio2"
+                    value="#1"
+                  />
+                  <label class="form-check-label" for="soc-adl-radio2">
+                    #1
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-adl-radio"
+                    id="soc-adl-radio3"
+                    value="#2"
+                  />
+                  <label class="form-check-label" for="soc-adl-radio3">
+                    #2
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-adl-radio"
+                    id="soc-adl-radio4"
+                    value="#3"
+                  />
+                  <label class="form-check-label" for="soc-adl-radio4">
+                    #3
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-adl-radio"
+                    id="soc-adl-radio5"
+                    value="#4"
+                  />
+                  <label class="form-check-label" for="soc-adl-radio5">
+                    #4
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">DME:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-dme-radio"
+                    id="soc-dme-radio1"
+                    value="cane"
+                  />
+                  <label class="form-check-label" for="soc-dme-radio1">
+                    Cane
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-dme-radio"
+                    id="soc-dme-radio2"
+                    value="walker"
+                  />
+                  <label class="form-check-label" for="soc-dme-radio2">
+                    Walker
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-dme-radio"
+                    id="soc-dme-radio3"
+                    value="wheelchair"
+                  />
+                  <label class="form-check-label" for="soc-dme-radio3">
+                    Wheelchair
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Mental:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check w-100">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-mental-radio"
+                    id="soc-mental-radio1"
+                    value="A/A/Ox4"
+                  />
+                  <label class="form-check-label" for="soc-mental-radio1">
+                    A/A/Ox4
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-mental-radio"
+                    id="soc-mental-radio2"
+                    value="forgetful/confused"
+                  />
+                  <label class="form-check-label" for="soc-mental-radio2">
+                    Forgetful/Confused
+                  </label>
+                </div>
+                <div class="form-check ms-5">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-mental-radio"
+                    id="soc-mental-radio3"
+                    value="able to follow command"
+                  />
+                  <label class="form-check-label" for="soc-mental-radio3">
+                    able to follow command
+                  </label>
+                </div>
+                <div class="form-check ms-5">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-mental-radio"
+                    id="soc-mental-radio4"
+                    value="unable to follow command"
+                  />
+                  <label class="form-check-label" for="soc-mental-radio4">
+                    unable to follow command
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-mental-radio"
+                    id="soc-mental-radio5"
+                    value="n/a"
+                  />
+                  <label class="form-check-label" for="soc-mental-radio5">
+                    N/A
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Pain:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-pain-radio"
+                    id="soc-pain-radio1"
+                    value="pain"
+                  />
+                  <label class="form-check-label" for="soc-pain-radio1">
+                    Pain
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-pain-radio"
+                    id="soc-pain-radio2"
+                    value="nopain"
+                  />
+                  <label class="form-check-label" for="soc-pain-radio2">
+                    No Pain
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Home:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-home-radio"
+                    id="soc-home-radio1"
+                    value="home"
+                  />
+                  <label class="form-check-label" for="soc-home-radio1">
+                    Home
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-home-radio"
+                    id="soc-home-radio2"
+                    value="B&C"
+                  />
+                  <label class="form-check-label" for="soc-home-radio2">
+                    B&C
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soc-home-radio"
+                    id="soc-home-radio3"
+                    value="Assisted Living"
+                  />
+                  <label class="form-check-label" for="soc-home-radio3">
+                    Assisted Living
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Home:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="family"
+                    name="soc-home-check"
+                    id="soc-home-check1"
+                  />
+                  <label class="form-check-label" for="soc-home-check1">
+                    Family
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="PCG"
+                    name="soc-home-check"
+                    id="soc-home-check2"
+                  />
+                  <label class="form-check-label" for="soc-home-check2">
+                    PCG
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="alone"
+                    name="soc-home-check"
+                    id="soc-home-check3"
+                  />
+                  <label class="form-check-label" for="soc-home-check3">
+                    Alone
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Diagnosis:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="wound"
+                    name="soc-diagnosis-check"
+                    id="soc-diagnosis-check1"
+                  />
+                  <label class="form-check-label" for="soc-diagnosis-check1">
+                    Wound
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="trach"
+                    name="soc-diagnosis-check"
+                    id="soc-diagnosis-check2"
+                  />
+                  <label class="form-check-label" for="soc-diagnosis-check2">
+                    Trach
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="ESRD"
+                    name="soc-diagnosis-check"
+                    id="soc-diagnosis-check3"
+                  />
+                  <label class="form-check-label" for="soc-diagnosis-check3">
+                    ESRD
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="PICC Line"
+                    name="soc-diagnosis-check"
+                    id="soc-diagnosis-check4"
+                  />
+                  <label class="form-check-label" for="soc-diagnosis-check4">
+                    PICC Line
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="G-Tube"
+                    name="soc-diagnosis-check"
+                    id="soc-diagnosis-check5"
+                  />
+                  <label class="form-check-label" for="soc-diagnosis-check5">
+                    G-Tube
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="CHF"
+                    name="soc-diagnosis-check"
+                    id="soc-diagnosis-check6"
+                  />
+                  <label class="form-check-label" for="soc-diagnosis-check6">
+                    CHF
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="DM1"
+                    name="soc-diagnosis-check"
+                    id="soc-diagnosis-check7"
+                  />
+                  <label class="form-check-label" for="soc-diagnosis-check7">
+                    DM1
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="DM2"
+                    name="soc-diagnosis-check"
+                    id="soc-diagnosis-check8"
+                  />
+                  <label class="form-check-label" for="soc-diagnosis-check8">
+                    DM2
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Foley"
+                    name="soc-diagnosis-check"
+                    id="soc-diagnosis-check9"
+                  />
+                  <label class="form-check-label" for="soc-diagnosis-check9">
+                    Foley
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="injection"
+                    name="soc-diagnosis-check"
+                    id="soc-diagnosis-check10"
+                  />
+                  <label class="form-check-label" for="soc-diagnosis-check10">
+                    Injection
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="diabetes"
+                    name="soc-diagnosis-check"
+                    id="soc-diagnosis-check11"
+                  />
+                  <label class="form-check-label" for="soc-diagnosis-check11">
+                    Diabetes
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="insulin"
+                    name="soc-diagnosis-check"
+                    id="soc-diagnosis-check12"
+                  />
+                  <label class="form-check-label" for="soc-diagnosis-check12">
+                    Insulin
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Precautions:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="fall"
+                    name="soc-precautions-check"
+                    id="soc-precautions-check1"
+                  />
+                  <label class="form-check-label" for="soc-precautions-check1">
+                    Fall
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="braden"
+                    name="soc-precautions-check"
+                    id="soc-precautions-check2"
+                  />
+                  <label class="form-check-label" for="soc-precautions-check2">
+                    Braden
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="oxygen"
+                    name="soc-precautions-check"
+                    id="soc-precautions-check3"
+                  />
+                  <label class="form-check-label" for="soc-precautions-check3">
+                    Oxygen
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="aspiration"
+                    name="soc-precautions-check"
+                    id="soc-precautions-check4"
+                  />
+                  <label class="form-check-label" for="soc-precautions-check4">
+                    Aspiration
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="seizure"
+                    name="soc-precautions-check"
+                    id="soc-precautions-check5"
+                  />
+                  <label class="form-check-label" for="soc-precautions-check5">
+                    Seizure
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto mt-4">
+              <button type="submit" class="btn btn-primary">Start</button>
+            </div>
+          </form>
+        </div>
+        <!-- <div
+          class="tab-pane fade"
+          id="roc-tab-pane"
+          role="tabpanel"
+          aria-labelledby="roc-tab"
+          tabindex="0"
+        >
+          ...
+        </div> -->
+        <div
+          class="tab-pane fade"
+          id="recert-kinnser-tab-pane"
+          role="tabpanel"
+          aria-labelledby="recert-kinnser-tab"
+          tabindex="0"
+        >
+          <form id="recert-kinnser-form-kinnser">
+            <div class="row">
+              <div class="col-3">ADLs:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-kinnser-adl-radio"
+                    id="recert-kinnser-adl-radio1"
+                    value="#0"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-adl-radio1"
+                  >
+                    #0
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-kinnser-adl-radio"
+                    id="recert-kinnser-adl-radio2"
+                    value="#1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-adl-radio2"
+                  >
+                    #1
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-kinnser-adl-radio"
+                    id="recert-kinnser-adl-radio3"
+                    value="#2"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-adl-radio3"
+                  >
+                    #2
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-kinnser-adl-radio"
+                    id="recert-kinnser-adl-radio4"
+                    value="#3"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-adl-radio4"
+                  >
+                    #3
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-kinnser-adl-radio"
+                    id="recert-kinnser-adl-radio5"
+                    value="#4"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-adl-radio5"
+                  >
+                    #4
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">DME:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-kinnser-dme-radio"
+                    id="recert-kinnser-dme-radio1"
+                    value="cane"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-dme-radio1"
+                  >
+                    Cane
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-kinnser-dme-radio"
+                    id="recert-kinnser-dme-radio2"
+                    value="walker"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-dme-radio2"
+                  >
+                    Walker
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-kinnser-dme-radio"
+                    id="recert-kinnser-dme-radio3"
+                    value="wheelchair"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-dme-radio3"
+                  >
+                    Wheelchair
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Mental:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check w-100">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-kinnser-mental-radio"
+                    id="recert-kinnser-mental-radio1"
+                    value="A/A/Ox4"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-mental-radio1"
+                  >
+                    A/A/Ox4
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-kinnser-mental-radio"
+                    id="recert-kinnser-mental-radio2"
+                    value="forgetful/confused"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-mental-radio2"
+                  >
+                    Forgetful/Confused
+                  </label>
+                </div>
+                <div class="form-check ms-5">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-kinnser-mental-radio"
+                    id="recert-kinnser-mental-radio3"
+                    value="able to follow command"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-mental-radio3"
+                  >
+                    able to follow command
+                  </label>
+                </div>
+                <div class="form-check ms-5">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-kinnser-mental-radio"
+                    id="recert-kinnser-mental-radio4"
+                    value="unable to follow command"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-mental-radio4"
+                  >
+                    unable to follow command
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-kinnser-mental-radio"
+                    id="recert-kinnser-mental-radio5"
+                    value="n/a"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-mental-radio5"
+                  >
+                    N/A
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Pain:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-kinnser-pain-radio"
+                    id="recert-kinnser-pain-radio1"
+                    value="pain"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-pain-radio1"
+                  >
+                    Pain
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-kinnser-pain-radio"
+                    id="recert-kinnser-pain-radio2"
+                    value="nopain"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-pain-radio2"
+                  >
+                    No Pain
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Home:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-kinnser-home-radio"
+                    id="recert-kinnser-home-radio1"
+                    value="home"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-home-radio1"
+                  >
+                    Home
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-kinnser-home-radio"
+                    id="recert-kinnser-home-radio2"
+                    value="B&C"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-home-radio2"
+                  >
+                    B&C
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="recert-kinnser-home-radio"
+                    id="recert-kinnser-home-radio3"
+                    value="Assisted Living"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-home-radio3"
+                  >
+                    Assisted Living
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Home:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="family"
+                    name="recert-kinnser-home-check"
+                    id="recert-kinnser-home-check1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-home-check1"
+                  >
+                    Family
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="PCG"
+                    name="recert-kinnser-home-check"
+                    id="recert-kinnser-home-check2"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-home-check2"
+                  >
+                    PCG
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="alone"
+                    name="recert-kinnser-home-check"
+                    id="recert-kinnser-home-check3"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-home-check3"
+                  >
+                    Alone
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Diagnosis:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="wound"
+                    name="recert-kinnser-diagnosis-check"
+                    id="recert-kinnser-diagnosis-check1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-diagnosis-check1"
+                  >
+                    Wound
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="trach"
+                    name="recert-kinnser-diagnosis-check"
+                    id="recert-kinnser-diagnosis-check2"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-diagnosis-check2"
+                  >
+                    Trach
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="ESRD"
+                    name="recert-kinnser-diagnosis-check"
+                    id="recert-kinnser-diagnosis-check3"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-diagnosis-check3"
+                  >
+                    ESRD
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="PICC Line"
+                    name="recert-kinnser-diagnosis-check"
+                    id="recert-kinnser-diagnosis-check4"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-diagnosis-check4"
+                  >
+                    PICC Line
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="G-Tube"
+                    name="recert-kinnser-diagnosis-check"
+                    id="recert-kinnser-diagnosis-check5"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-diagnosis-check5"
+                  >
+                    G-Tube
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="CHF"
+                    name="recert-kinnser-diagnosis-check"
+                    id="recert-kinnser-diagnosis-check6"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-diagnosis-check6"
+                  >
+                    CHF
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="DM1"
+                    name="recert-kinnser-diagnosis-check"
+                    id="recert-kinnser-diagnosis-check7"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-diagnosis-check7"
+                  >
+                    DM1
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="DM2"
+                    name="recert-kinnser-diagnosis-check"
+                    id="recert-kinnser-diagnosis-check8"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-diagnosis-check8"
+                  >
+                    DM2
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Foley"
+                    name="recert-kinnser-diagnosis-check"
+                    id="recert-kinnser-diagnosis-check9"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-diagnosis-check9"
+                  >
+                    Foley
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="injection"
+                    name="recert-kinnser-diagnosis-check"
+                    id="recert-kinnser-diagnosis-check10"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-diagnosis-check10"
+                  >
+                    Injection
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="diabetes"
+                    name="recert-kinnser-diagnosis-check"
+                    id="recert-kinnser-diagnosis-check11"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-diagnosis-check11"
+                  >
+                    Diabetes
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="insulin"
+                    name="recert-kinnser-diagnosis-check"
+                    id="recert-kinnser-diagnosis-check12"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-diagnosis-check12"
+                  >
+                    Insulin
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="DM"
+                    name="recert-kinnser-diagnosis-check"
+                    id="recert-kinnser-diagnosis-check13"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-diagnosis-check13"
+                  >
+                    DM
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Precautions:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="fall"
+                    name="recert-kinnser-precautions-check"
+                    id="recert-kinnser-precautions-check1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-precautions-check1"
+                  >
+                    Fall
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="braden"
+                    name="recert-kinnser-precautions-check"
+                    id="recert-kinnser-precautions-check2"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-precautions-check2"
+                  >
+                    Braden
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="oxygen"
+                    name="recert-kinnser-precautions-check"
+                    id="recert-kinnser-precautions-check3"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-precautions-check3"
+                  >
+                    Oxygen
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="aspiration"
+                    name="recert-kinnser-precautions-check"
+                    id="recert-kinnser-precautions-check4"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-precautions-check4"
+                  >
+                    Aspiration
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="seizure"
+                    name="recert-kinnser-precautions-check"
+                    id="recert-kinnser-precautions-check5"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="recert-kinnser-precautions-check5"
+                  >
+                    Seizure
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto mt-4">
+              <button type="submit" class="btn btn-primary">Start</button>
+            </div>
+          </form>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="followup-kinnser-tab-pane"
+          role="tabpanel"
+          aria-labelledby="followup-kinnser-tab"
+          tabindex="0"
+        >
+          <form id="followup-kinnser-form-kinnser">
+            <div class="row">
+              <div class="col-3">ADLs:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="followup-kinnser-adl-radio"
+                    id="followup-kinnser-adl-radio1"
+                    value="#0"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-adl-radio1"
+                  >
+                    #0
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="followup-kinnser-adl-radio"
+                    id="followup-kinnser-adl-radio2"
+                    value="#1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-adl-radio2"
+                  >
+                    #1
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="followup-kinnser-adl-radio"
+                    id="followup-kinnser-adl-radio3"
+                    value="#2"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-adl-radio3"
+                  >
+                    #2
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="followup-kinnser-adl-radio"
+                    id="followup-kinnser-adl-radio4"
+                    value="#3"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-adl-radio4"
+                  >
+                    #3
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="followup-kinnser-adl-radio"
+                    id="followup-kinnser-adl-radio5"
+                    value="#4"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-adl-radio5"
+                  >
+                    #4
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">DME:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="followup-kinnser-dme-radio"
+                    id="followup-kinnser-dme-radio1"
+                    value="cane"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-dme-radio1"
+                  >
+                    Cane
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="followup-kinnser-dme-radio"
+                    id="followup-kinnser-dme-radio2"
+                    value="walker"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-dme-radio2"
+                  >
+                    Walker
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="followup-kinnser-dme-radio"
+                    id="followup-kinnser-dme-radio3"
+                    value="wheelchair"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-dme-radio3"
+                  >
+                    Wheelchair
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Mental:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check w-100">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="followup-kinnser-mental-radio"
+                    id="followup-kinnser-mental-radio1"
+                    value="A/A/Ox4"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-mental-radio1"
+                  >
+                    A/A/Ox4
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="followup-kinnser-mental-radio"
+                    id="followup-kinnser-mental-radio2"
+                    value="forgetful/confused"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-mental-radio2"
+                  >
+                    Forgetful/Confused
+                  </label>
+                </div>
+                <div class="form-check ms-5">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="followup-kinnser-mental-radio"
+                    id="followup-kinnser-mental-radio3"
+                    value="able to follow command"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-mental-radio3"
+                  >
+                    able to follow command
+                  </label>
+                </div>
+                <div class="form-check ms-5">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="followup-kinnser-mental-radio"
+                    id="followup-kinnser-mental-radio4"
+                    value="unable to follow command"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-mental-radio4"
+                  >
+                    unable to follow command
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="followup-kinnser-mental-radio"
+                    id="followup-kinnser-mental-radio5"
+                    value="n/a"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-mental-radio5"
+                  >
+                    N/A
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Pain:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="followup-kinnser-pain-radio"
+                    id="followup-kinnser-pain-radio1"
+                    value="pain"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-pain-radio1"
+                  >
+                    Pain
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="followup-kinnser-pain-radio"
+                    id="followup-kinnser-pain-radio2"
+                    value="nopain"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-pain-radio2"
+                  >
+                    No Pain
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Home:</div>
+              <div class="col-9 d-flex justify-content-between flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="followup-kinnser-home-radio"
+                    id="followup-kinnser-home-radio1"
+                    value="home"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-home-radio1"
+                  >
+                    Home
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="followup-kinnser-home-radio"
+                    id="followup-kinnser-home-radio2"
+                    value="B&C"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-home-radio2"
+                  >
+                    B&C
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="followup-kinnser-home-radio"
+                    id="followup-kinnser-home-radio3"
+                    value="Assisted Living"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-home-radio3"
+                  >
+                    Assisted Living
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Home:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="family"
+                    name="followup-kinnser-home-check"
+                    id="followup-kinnser-home-check1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-home-check1"
+                  >
+                    Family
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="PCG"
+                    name="followup-kinnser-home-check"
+                    id="followup-kinnser-home-check2"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-home-check2"
+                  >
+                    PCG
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="alone"
+                    name="followup-kinnser-home-check"
+                    id="followup-kinnser-home-check3"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-home-check3"
+                  >
+                    Alone
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Diagnosis:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="wound"
+                    name="followup-kinnser-diagnosis-check"
+                    id="followup-kinnser-diagnosis-check1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-diagnosis-check1"
+                  >
+                    Wound
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="trach"
+                    name="followup-kinnser-diagnosis-check"
+                    id="followup-kinnser-diagnosis-check2"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-diagnosis-check2"
+                  >
+                    Trach
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="ESRD"
+                    name="followup-kinnser-diagnosis-check"
+                    id="followup-kinnser-diagnosis-check3"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-diagnosis-check3"
+                  >
+                    ESRD
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="PICC Line"
+                    name="followup-kinnser-diagnosis-check"
+                    id="followup-kinnser-diagnosis-check4"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-diagnosis-check4"
+                  >
+                    PICC Line
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="G-Tube"
+                    name="followup-kinnser-diagnosis-check"
+                    id="followup-kinnser-diagnosis-check5"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-diagnosis-check5"
+                  >
+                    G-Tube
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="CHF"
+                    name="followup-kinnser-diagnosis-check"
+                    id="followup-kinnser-diagnosis-check6"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-diagnosis-check6"
+                  >
+                    CHF
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="DM1"
+                    name="followup-kinnser-diagnosis-check"
+                    id="followup-kinnser-diagnosis-check7"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-diagnosis-check7"
+                  >
+                    DM1
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="DM2"
+                    name="followup-kinnser-diagnosis-check"
+                    id="followup-kinnser-diagnosis-check8"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-diagnosis-check8"
+                  >
+                    DM2
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Foley"
+                    name="followup-kinnser-diagnosis-check"
+                    id="followup-kinnser-diagnosis-check9"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-diagnosis-check9"
+                  >
+                    Foley
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="injection"
+                    name="followup-kinnser-diagnosis-check"
+                    id="followup-kinnser-diagnosis-check10"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-diagnosis-check10"
+                  >
+                    Injection
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="diabetes"
+                    name="followup-kinnser-diagnosis-check"
+                    id="followup-kinnser-diagnosis-check11"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-diagnosis-check11"
+                  >
+                    Diabetes
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="insulin"
+                    name="followup-kinnser-diagnosis-check"
+                    id="followup-kinnser-diagnosis-check12"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-diagnosis-check12"
+                  >
+                    Insulin
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="DM"
+                    name="followup-kinnser-diagnosis-check"
+                    id="followup-kinnser-diagnosis-check13"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-diagnosis-check13"
+                  >
+                    DM
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-1">
+              <div class="col-3">Precautions:</div>
+              <div class="col-9 d-flex gap-2 flex-wrap">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="fall"
+                    name="followup-kinnser-precautions-check"
+                    id="followup-kinnser-precautions-check1"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-precautions-check1"
+                  >
+                    Fall
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="braden"
+                    name="followup-kinnser-precautions-check"
+                    id="followup-kinnser-precautions-check2"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-precautions-check2"
+                  >
+                    Braden
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="oxygen"
+                    name="followup-kinnser-precautions-check"
+                    id="followup-kinnser-precautions-check3"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-precautions-check3"
+                  >
+                    Oxygen
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="aspiration"
+                    name="followup-kinnser-precautions-check"
+                    id="followup-kinnser-precautions-check4"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-precautions-check4"
+                  >
+                    Aspiration
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="seizure"
+                    name="followup-kinnser-precautions-check"
+                    id="followup-kinnser-precautions-check5"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="followup-kinnser-precautions-check5"
+                  >
+                    Seizure
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto mt-4">
+              <button type="submit" class="btn btn-primary">Start</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-none start-fill-loader mb-5 d-flex justify-content-center">
+      <div class="spinner-border text-primary spinner-border-sm" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+      <div
+        id="toast-error"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="alert alert-danger m-0" role="alert"></div>
+      </div>
+    </div>
+
+    <script src="../../scripts/imports/js/jquery.min.js"></script>
+    <script src="../../scripts/imports/js/popper.min.js"></script>
+    <script src="../../scripts/imports/js/bootstrap.min.js"></script>
+    <script type="module" src="../assets/js/popup.js"></script>
+  </body>
+</html>
